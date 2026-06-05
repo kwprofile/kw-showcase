@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kianna Willmore's Portfolio - Contact</title>
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+
+<body class="content">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <!-- This creates the dropdown menu using an unordered list, triggered by the <summary> element -->
+        <details class="menu">
+            <summary>⊹ ✦ KW PORTFOLIO ✦ ⊹</summary>
+            <ul class="submenu">
+                <li class="droptop"><button onclick="window.location.href='Featured.html'">Featured</button></li>
+                <li><button onclick="window.location.href='Videography.html'">Videography</button></li>
+                <li><button onclick="window.location.href='Photography.html'">Photography</button></li>
+                <li><button onclick="window.location.href='GraphicDesign.html'">Graphic Design</button></li>
+                <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
+            </ul>
+        </details>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="formcontainer">
+        <form action="https://formsubmit.co/kianna.w.contact@gmail.com" method="post" enctype="text/plain">
+            <h2>Contact Me</h2>
+            <p>Name:</p>
+            <input type="text" name="name" required>
+            <p>E-mail:</p>
+            <input type="text" name="email" required>
+            <p>Location (optional):</p>
+            <input type="text" name="location">
+            <p>Message:</p>
+            <textarea name="message" rows="5" required></textarea>
+            <button type="submit" onclick="">Submit</button>
+        </form>
+    </div>
+</body>
+
+
+
+
+<!-- NAVBAR STYLING -->
+<style>
+    /* Removes the scrollbar while keeping the scroll option */
+    .content::-webkit-scrollbar {
+        display: none;
+    }
+
+/* --- NAVIGATION BAR STYLING --- */
+    .menu {
+        text-align: center;
+        background-color: black;
+    }
+
+    /* fixes the spacing between the summary btn and the first dropdown item */
+    .droptop {
+        margin-top: -25px;
+    }
+
+    /* gets rid of the list dots in navbar */
+    .menu, .submenu {
+        list-style-type: none;
+    }
+
+    /* affects the styling of buttons in the menu only */
+    .menu button {
+        cursor: pointer;
+        color: white;
+        font-size: 150%;
+        padding: 10px 0;
+        /* aligns drop down items to centered summary btn */
+        margin-left: -40px;
+        /* styling inside the buttons */
+        background-color: transparent;
+        border: none;
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /* styles the "MENU" button (summary) */
+    .menu summary {
+        background-color: transparent;
+        list-style: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        /* matches the size of the summary btn to the dropdown buttons */
+        font-size: 151%;
+        font-family: Arial, Helvetica, sans-serif;
+        /* adding space */
+        padding-top: 15px;
+        padding-bottom: 15px;
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
+
+<!-- PAGE CONTENT STYLING -->
+<style>
+    .content {
+        background-color: grey;
+        /* fixes the navbar issue with spacing around its background */
+        margin: auto;
+    }
+
+    form {
+        /* aligns form items to center */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* extends the width of all boxes to screen size */
+    form input, textarea {
+        /* sets the width of the form and its items */
+        width: 60%;
+    }
+
+    /* affects only the input fields */
+    form, input {
+        height: 10px;
+        padding: 15px; /*padding in px allows for fized height resizing (no change)*/
+    }
+
+    /* affects only the textarea */
+    form, textarea {
+        /* sets the height of the message box */
+        height: 500%;
+        padding: 15px;
+    }
+</style>
+</html>
+
