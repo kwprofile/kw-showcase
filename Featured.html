@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kianna Willmore's Portfolio - Featured</title>
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+
+<body class="content">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <!-- This creates the dropdown menu using an unordered list, triggered by the <summary> element -->
+        <details class="menu">
+            <summary>⊹ ✦ KW PORTFOLIO ✦ ⊹</summary>
+            <ul class="submenu">
+                <li class="droptop"><button onclick="window.location.href='Featured.html'">Featured</button></li>
+                <li><button onclick="window.location.href='Videography.html'">Videography</button></li>
+                <li><button onclick="window.location.href='Photography.html'">Photography</button></li>
+                <li><button onclick="window.location.href='GraphicDesign.html'">Graphic Design</button></li>
+                <li><button onclick="window.location.href='Commissions.html'">Commissions</button></li>
+                <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
+            </ul>
+        </details>
+    </div>
+
+    
+</body>
+
+<!-- NAVBAR STYLING -->
+<style>
+    .content {
+        background-color: grey;
+        /* fixes the navbar issue with spacing around its background */
+        margin: auto;
+    }
+
+    /* Removes the scrollbar while keeping the scroll option */
+    .content::-webkit-scrollbar {
+        display: none;
+    }
+
+/* --- NAVIGATION BAR STYLING --- */
+    .menu {
+        text-align: center;
+        background-color: black;
+        /* THE LINES OF CODE BELOW WILL HELP LAYER NAVBAR OVER CONTENT */
+        position: relative;
+        z-index: 0; /* 0 = front layer */
+    }
+
+    /* fixes the spacing between the summary btn and the first dropdown item */
+    .droptop {
+        margin-top: -25px;
+    }
+
+    /* gets rid of the list dots in navbar */
+    .menu, .submenu {
+        list-style-type: none;
+    }
+
+    /* affects the styling of buttons in the menu only */
+    .menu button {
+        cursor: pointer;
+        color: white;
+        font-size: 150%;
+        padding: 10px 0;
+        /* aligns drop down items to centered summary btn */
+        margin-left: -40px;
+        /* styling inside the buttons */
+        background-color: transparent;
+        border: none;
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /* styles the "MENU" button (summary) */
+    .menu summary {
+        background-color: transparent;
+        list-style: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        /* matches the size of the summary btn to the dropdown buttons */
+        font-size: 151%;
+        font-family: Arial, Helvetica, sans-serif;
+        /* adding space */
+        padding-top: 15px;
+        padding-bottom: 15px;
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
+</html>
+

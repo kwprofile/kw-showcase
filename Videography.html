@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kianna Willmore's Portfolio - Videography</title>
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+
+<body class="content">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <!-- This creates the dropdown menu using an unordered list, triggered by the <summary> element -->
+        <details class="menu">
+            <summary>⊹ ✦ KW PORTFOLIO ✦ ⊹</summary>
+            <ul class="submenu">
+                <li class="droptop"><button onclick="window.location.href='Featured.html'">Featured</button></li>
+                <li><button onclick="window.location.href='Videography.html'">Videography</button></li>
+                <li><button onclick="window.location.href='Photography.html'">Photography</button></li>
+                <li><button onclick="window.location.href='GraphicDesign.html'">Graphic Design</button></li>
+                <li><button onclick="window.location.href='Commissions.html'">Commissions</button></li>
+                <li><button onclick="window.location.href='Contact.html'">Contact</button></li>
+            </ul>
+        </details>
+    </div>
+    
+    <!-- PAGE CONTENT -->
+    <div class="pageheader">
+        <h2>Videography</h2>
+        <p class="blurb1">Words about how I've worked on different video projects professionally and for fun</p>
+        <br>
+
+        <h3>Jump to section</h3>
+        <ul class="jumplist">
+            <li><a href="#ShortFilms">Short Films</a></li>
+            <li><a href="#Commercial">Commercial</a></li>
+            <li><a href="#MotionGraphics">Motion Graphics</a></li>
+            <li><a href="#Misc">Misc.</a></li>
+    </div>
+
+        <!-- line divider -->
+        <br>
+        <hr style="height: 3px; width: 12%; border: none; background-color: rgb(255, 255, 255);">
+        <br>
+
+    <div class="shortfilms">
+        <h3 id="ShortFilms">Short Films</h3>
+
+        <div class="vidscontainer">
+            <div class="vid1">
+                <!-- insert video embed here -->
+                 <h4>Video Title</h5>
+                 <h5>My Role(s): role role role role</h6>
+                 <p>blurb about the first video and my roles</p>
+            </div>
+
+            <div class="vid2">
+                <!-- insert video embed here -->
+                 <h4>Video Title</h5>
+                 <h5>My Role(s): role role role role</h5>
+                 <p>blurb about the second video and my roles</p>
+            </div>
+
+            <div class="vid3">
+                <!-- insert video embed here -->
+                 <h4>Video Title</h5>
+                 <h5>My Role(s): role role role role</h5>
+                 <p>blurb about the third video and my roles</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- NAVBAR STYLING -->
+<style>
+    .content {
+    background-color: grey;
+    /* fixes the navbar issue with spacing around its background */
+    margin: auto;
+    }
+
+/* --- NAVIGATION BAR STYLING --- */
+    .menu {
+        text-align: center;
+        background-color: black;
+        /* THE LINES OF CODE BELOW WILL HELP LAYER NAVBAR OVER CONTENT */
+        position: relative;
+        z-index: 0; /* 0 = front layer */
+    }
+
+    /* fixes the spacing between the summary btn and the first dropdown item */
+    .droptop {
+        margin-top: -25px;
+    }
+
+    /* gets rid of the list dots in navbar */
+    .menu, .submenu {
+        list-style-type: none;
+    }
+
+    /* affects the styling of buttons in the menu only */
+    .menu button {
+        cursor: pointer;
+        color: white;
+        font-size: 150%;
+        padding: 10px 0;
+        /* aligns drop down items to centered summary btn */
+        margin-left: -40px;
+        /* styling inside the buttons */
+        background-color: transparent;
+        border: none;
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /* styles the "MENU" button (summary) */
+    .menu summary {
+        background-color: transparent;
+        list-style: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        /* matches the size of the summary btn to the dropdown buttons */
+        font-size: 151%;
+        font-family: Arial, Helvetica, sans-serif;
+        /* adding space */
+        padding-top: 15px;
+        padding-bottom: 15px;
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
+
+<!-- PAGE CONTENT STYLING -->
+<style>
+    /* Removes the scrollbar while keeping the scroll option */
+    .content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content {
+        /* Will remove small extra padding around overlay gradient so that it fits to screen size */
+        margin: 0;
+        padding: 0;
+        z-index: 1; /* layers the page contents underneath the navbar, 1 is a layer back further than 0 */
+        color: white;
+        /* text-align: center; */
+
+        /* setting image bg */
+        /* background-image: url(Website/WarmPaperAltv1.jpg);
+        background-size: cover; */
+        /* width: 100%; makes the overlay fit the entire screen width */
+        /* height: 100vh; makes the overlay fit the entire screen height */
+        /* background-repeat: no-repeat; */
+        /* animation: switchImages 0.8s infinite alternate; adds a simple animation to switch between the two background images */
+        /* animation-timing-function: ease-in-out; makes the animation smoother */
+    }
+
+    /* coding the animation for bg cycle */
+    /* @keyframes switchImages {
+        100% { background-image: url(Website/WarmPaperAltv1.jpg); }
+        100% { background-image: url(Website/WarmPaper2Altv1.jpg); }
+    } */
+
+
+    /* --- HEADER STYLING (JUMPLIST) --- */
+    h2, h3 {
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 6vw;
+        margin-bottom: 0; /* removes space between h2 and blurb1 */
+    }
+
+    .blurb1 {
+        text-align: center;
+        font-size: 1.5vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+        margin-bottom: 2%;
+    }
+
+    .jumplist {
+        /* removes list bullets */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .jumplist li {
+        /* aligns the list items in horizontal fashion (inline) */
+        display: inline-block;
+        margin: 0 3%;
+        font-size: 200%;
+        text-transform: uppercase;
+    }
+
+    /* styling the jump links */
+    .jumplist li a {
+        text-decoration: none; /* removes the underline from jump links */
+        color: inherit; /* makes the jump link text the same colour as the rest of the page text */
+
+    }
+
+    .jumplist li a:hover {
+        color: rgb(78, 29, 5); /* adds a subtle hover effect to the jump links */
+    }
+
+    hr {
+        margin: 50px auto; /* adds space above and below the line, and centers it horizontally */
+    }
+
+</style>
+</html>
