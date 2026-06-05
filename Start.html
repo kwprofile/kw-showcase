@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kianna Willmore's Portfolio - Welcome</title>
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+
+<body class="content">
+    
+    <div class="overlay">
+        <div class="container">
+            <h1>
+                KIANNA WILLMORE'S <br>
+                PORTFOLIO SHOWCASE
+            </h1>
+
+            <div style="text-align: center;"> <!-- centers the button position in the page via container -->
+                <button type="button" class="enter" onclick="window.location.href='Featured.html'">{ Enter }</button> <!-- onclick links to the featured page -->
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- THESE COLOUR AND FONT STYLES ARE PLACEHOLDERS FOR NOW UNTIL I DECIDE WEBSITE BRANDING -->
+<style>
+    /* styles the entire body + texts */
+    .content {
+        display: flex;
+        justify-content: center;
+        /* setting image bg */
+        background-image: url(Website/WarmPaper.jpg);
+        background-size: cover;
+        animation: switchImages 0.8s infinite alternate; /* adds a simple animation to switch between the two background images */
+        animation-timing-function: ease-in-out; /* makes the animation smoother */
+        /* Will remove small extra padding around overlay gradient so that it fits to screen size */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* coding the animation for bg cycle */
+    @keyframes switchImages {
+        100% { background-image: url(Website/WarmPaper.jpg); }
+        100% { background-image: url(Website/WarmPaper2.jpg); }
+    }
+
+    .overlay {
+        background-image: linear-gradient(to bottom, rgba(255, 194, 156, 0.7), rgba(139, 57, 56, 0.7)); /* semi-transparent gradient overlay */
+        width: 100%; /* makes the overlay fit the entire screen width */
+        height: 100vh; /* makes the overlay fit the entire screen height */
+        /* centers the contents of the page */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* styles inside the button */
+    .enter {
+        text-align: center;
+        background-color: transparent;
+        /* border: 2px solid rgba(255, 255, 255, 0.283); semi-transparent white border */
+        border: transparent;
+        /* border-radius: 8px; rounds the button corners */
+        cursor: pointer;
+        color: white;
+        padding: 2% 8%; /* percentage-based padding allows for automatic resizing according to screen size */
+        font-size: 4vh; /* scales up button text */
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /* change of colour in button when hovering over */
+    .enter:hover {
+        color: rgb(78, 29, 5); /* adds a subtle hover effect */
+    }
+
+    h1 {
+        /* setting the font */
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+        /* styles text */
+        color: white;
+        text-align: center; /* ensures text is aligned as paragraph-centered */
+        font-size: 5.5vw; /* scales text size according to screen width */
+    }
+
+    /* at screen size 700px and under, text size will change */
+    @media screen and (max-width: 700px) {
+        h1 {
+            font-size: 10vw;
+        }
+    }
+</style>
+</html>
