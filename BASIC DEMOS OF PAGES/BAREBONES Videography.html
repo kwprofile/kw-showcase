@@ -71,6 +71,17 @@
                     <p>Description: blurb about the first video and my roles</p>
                 </div>
             </div>
+
+            <div class="vid">
+                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0" style="clear:left; float: left"></iframe>
+                <div class="vid-desc">
+                    <h4>Title (YYYY)</h4>
+                    <h5>Contributing Roles: Role, Role, Role</h5>
+                    <h6>Programs I Worked With: Program, Program</h6>
+                    <p>Description: blurb about the first video and my roles</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
@@ -228,10 +239,10 @@
     /* --- VIDEOS AND DESCRIPTIONS STYLING --- */
     .vidscontainer {
         padding: 0 12%; /* adds padding to the sides of the container */
-    }
-
-    .vid {
-        margin: 10% 0; /* adds space between each video section */
+        /* creates seperate rows for the vids, seperating each .vid container from each other (IMPORTANT PROPERTY DO NOT REMOVE) */
+        display: flex;
+        flex-direction: column;
+        gap: 90px; /* adds space between each video section */
     }
 
     .video {
@@ -246,7 +257,7 @@
 
     /* The titles and paragraphs use % instead of vw to allow for more accurate resizing */
     h4 {
-        margin: 0; /* removes extra margin space on top of and underneath h4, aligns top of h4 title with top of video */
+        margin: 0;
         font-size: 250%;
     }
 
