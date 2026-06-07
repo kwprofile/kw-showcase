@@ -41,11 +41,12 @@
             <li><a href="#Misc">Misc.</a></li>
     </div>
 
-        <!-- line divider -->
-        <br>
-        <hr style="height: 3px; width: 12%; border: none; background-color: rgb(255, 255, 255);">
-        <br>
-
+    <!-- line divider -->
+    <br>
+    <hr style="height: 3px; width: 12%; border: none; background-color: rgb(255, 255, 255);">
+    <br>
+    
+    <!-- Short Films Section -->
     <div class="shortfilms">
         <!-- id is used for the jump link -->
         <h3 id="ShortFilms">Short Films</h3>
@@ -53,31 +54,45 @@
         <div class="vidscontainer">
             <div class="vid">
                 <!-- dividing the video into one section of the container, and the description in the other. The video frame floats left to allow for text desc to wrap around it -->
-                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0" style="clear:left; float: left"></iframe>
+                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
                 <div class="vid-desc">
                     <h4>BUDDY (2026)</h4>
                     <h5>Contributing Roles: Video/Sound Editor, Colourist, Actor</h5>
                     <h6>Programs I Worked With: Adobe Premiere Pro</h6>
+                    <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button> 
                     <p>Description: In Carleton University's "Film and Media Practice II" course, we got the opportunity to create short films within small production teams. My role within our group was primarily to bring together the director's (Tristan Deschamps') vision, tying together our production elements (Kat Farrell as the cinematographer, and Zixi Ning as the sound designer/composer) into a fully edited 20 minute film. I was also responsible for overseeing the colour grading and pacing for the film, with my teammates giving me creative input for each draft. This experience taught our team how to self-manage and execute a creative project with a professionally collaborative work ethic. It was an incredible pleasure to have worked with my group, as we had maintained a highly organized production schedule and consistent communication throughout the whole process. Our project started its scriptwriting and storyboarding phase in February of 2026, and completed production in early April of 2026.</p>
                 </div> 
             </div>
 
             <div class="vid">
-                <iframe class="video" src="https://www.youtube.com/embed/GFjyA9TOVKI?si=g-L8EeRDrsFio9Bg" allowfullscreen frameborder="0" style="clear:left; float: left"></iframe>
+                <iframe class="video" src="https://www.youtube.com/embed/GFjyA9TOVKI?si=g-L8EeRDrsFio9Bg" allowfullscreen frameborder="0"></iframe>
                 <div class="vid-desc">
                     <h4>Two's a Pittance (2025)</h4>
                     <h5>Contributing Roles: Director, Cinematographer, Video/Sound Editor, Colourist, Sound Production, Scriptwriter, Locations Scout</h5>
                     <h6>Programs I Worked With: DaVinci Resolve, Audacity</h6>
+                    <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button> 
                     <p>Description: (Shot on my Nikon D3500). During my first practical filmmaking course at Carleton University ("Film and Media Practice I"), I had to create an original short film to demonstrate my capabilities as a solo filmmaker. I was responsible for the full creative execution of this project, managing the production scheduling and casting for my crew. During this filmmaking experience, I learned the importance of pre-planning the staging and composition of all my shots, allowing for a smoother work ethic during filming days. Making this project was very enjoyable, with my friends volunteering as actors and making days on set highly fun (with some inside jokes even making it into the film). Two's a Pittance started its scriptwritting stage in September of 2025, and completed production in December of 2025.</p>
                 </div>
             </div>
 
             <div class="vid">
-                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0" style="clear:left; float: left"></iframe>
+                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
                 <div class="vid-desc">
                     <h4>Title (YYYY)</h4>
                     <h5>Contributing Roles: Role, Role, Role</h5>
                     <h6>Programs I Worked With: Program, Program</h6>
+                    <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button>
+                    <p>Description: blurb about the first video and my roles</p>
+                </div>
+            </div>
+
+            <div class="vid">
+                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
+                <div class="vid-desc">
+                    <h4>Title (YYYY)</h4>
+                    <h5>Contributing Roles: Role, Role, Role</h5>
+                    <h6>Programs I Worked With: Program, Program</h6>
+                    <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button> 
                     <p>Description: blurb about the first video and my roles</p>
                 </div>
             </div>
@@ -272,6 +287,9 @@
         height: 308px;
         width: 548px;
         border: 2px solid white;
+        /* VERY IMPORTANT: FLOAT STYLE PROPERTY ON VIDEOS (IFRAME) ALLOWS FOR TEXT DESC ON RIGHT TO WRAP AROUND */
+        clear:left; 
+        float: left;
     }
 
     /* The titles and paragraphs use % instead of vw to allow for more accurate resizing */
@@ -281,19 +299,25 @@
     }
 
     h5 {
-        margin: 1.5%;
+        margin: 1.5% 0;
         font-size: 145%;
     }
 
     h6 {
         font-size: 145%;
-        margin: 1.5%;
+        margin: 1.5% 0;
     }
 
     .vid-desc p {
         font-size: 123%;
         /* text-align: justify; */
         line-height: 1.5; /* adds space between lines of text for better readability */
+        display: block; /* ensures the description text is displayed by default for desktop, will still hide it for mobile */
+    }
+
+    /* This expand description button will only apply for mobile sizes, therefore it's hidden at a screen size of 1250px or more */
+    .expand-btn {
+        display: none;
     }
 
 
@@ -303,4 +327,123 @@
         font-size: 1.5vw;
     }
 </style>
+
+<!-- STYLING THE RESIZING -->
+ <style>
+    /* at 1250px screen size and under, these changes will be applied */
+    @media screen and (max-width: 1250px) {
+        h2 {
+            font-size: 9vw;
+            margin-top: 5%;
+        }
+
+        .blurb1 {
+            font-size: 3vw;
+            /* fixes some gapping issues between different elements around blurb1 */
+            margin-bottom: 0;
+            margin-top: 5%;
+            padding: 0 7%;
+        }
+
+        h3 {
+            font-size: 9vw;
+            margin-top: 5%;
+        }
+
+        .pageheader h3 {
+            margin-bottom: 5%;
+        }
+
+        .jumplist li {
+            /* aligns the list items in horizontal fashion (inline) */
+            margin: 0 3%;
+            font-size: 200%;
+            text-transform: uppercase;
+        }
+
+        /* Styling the videos and descriptions */
+        .vidscontainer {
+            padding: 0 12%; /* adds padding to the sides of the container */
+            /* creates seperate rows for the vids, seperating each .vid container from each other (IMPORTANT PROPERTY DO NOT REMOVE) */
+            display: flex;
+            flex-direction: column; /* changes to flex direction column so that vid descs are under video, not wrapping around */
+            gap: 120px; /* adds space between each video section */
+        }
+
+        .video {
+            /* adding margin space between the desc and the video, without messing up float alignment */
+            margin-right: 4%;
+            margin-bottom: 1%;
+            /* video and height ratio (1920x1080p) divided by how many x you want to scale down by (1920 and 1080p divided by 20 = 96%) */
+            height: 54%;
+            width: 96%;
+            border: 2px solid white;
+            /* removing the float style for mobile in favour of column layout */
+            clear: none; 
+            float: none;
+        }
+
+        /* The titles and paragraphs use % instead of vw to allow for more accurate resizing */
+        h4 {
+            margin: 0;
+            font-size: 7vw;
+        }
+
+        h5, h6 {
+            margin: 2% 0;
+            font-size: 150%;
+        }
+
+        .vid-desc h4, h5, h6, p {
+            text-align: center;
+            margin: 5% 0;
+        }
+
+        .shortfilms h3 {
+            margin-top: 0;
+        }
+
+        .vid-desc p {
+            font-size: 120%;
+            display: none; /* hides the description text for mobile, to be toggled by the expand description button */
+            /* text-align: justify; */
+            line-height: 1.5; /* adds space between lines of text for better readability */
+        }
+
+        .expand-btn {
+            display: block;
+            margin: 7% auto; /* auto centers the button horizontally */
+            margin-bottom: 0;
+            padding: 3% 6%;
+            font-size: 3vw;
+            border-radius: 20px;
+            border: 2px solid white;
+            background-color: darkgrey;
+            color: white;
+            font-weight: bold;
+        }
+
+        .expand-btn:active {
+            background-color: rgb(78, 29, 5);
+        }
+
+        /* This will be removed when stuff is added */
+        .TBA {
+            text-align: center;
+            font-size: 200%;
+            margin-top: -30px;
+        }
+    }
+ </style>
+
+<!-- javascript for mobile description toggle -->
+ <script>
+    function toggleDescriptions() {
+        const descriptions = document.querySelectorAll('.vid-desc p');
+        descriptions.forEach(desc => {
+            const currentDisplay = window.getComputedStyle(desc).display;
+            desc.style.display = currentDisplay === 'none' ? 'block' : 'none';
+        });
+    }
+ </script>
 </html>
