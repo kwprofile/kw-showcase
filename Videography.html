@@ -78,18 +78,47 @@
             <div class="vid">
                 <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
                 <div class="vid-desc">
+                    <h4>Open Worlds (2022)</h4>
+                    <h5>Contributing Roles: Director, Scriptwriter, Cinematographer, Video/Sound Editor, Colourist, Sound Production, Animator</h5>
+                    <h6>Programs I Worked With: Adobe Premiere Pro, Krita</h6>
+                    <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button> 
+                    <p>Description: In my final year of high school, I took a media production class where I had to create an original short film. This film was an important one, serving as many stepping stones in my early filmmaking journey. I even personally challenged myself to try superimposing a 2D animated character into live-action footage (and successfully learning how to chroma key my animated character). This was my first short film above 3 minutes, which I was very proud of at the time. I love creating mixed-media art very much, and aim to do more things like this for personal projects in the future.</p>
+                </div>
+            </div>
+
+            <!-- <div class="vid">
+                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
+                <div class="vid-desc">
                     <h4>Title (YYYY)</h4>
                     <h5>Contributing Roles: Role, Role, Role</h5>
                     <h6>Programs I Worked With: Program, Program</h6>
                     <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button>
                     <p>Description: blurb about the first video and my roles</p>
                 </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="commercial">
+        <h3 id="Commercial">Commercial Videos</h3>
+        <div class="vidscontainer">
+            <div class="vid">
+                <!-- dividing the video into one section of the container, and the description in the other. The video frame floats left to allow for text desc to wrap around it -->
+                <iframe class="video" src="https://www.youtube.com/embed/QpJco8KUfXE?si=SAVmzBHC3IYbPCKD" allowfullscreen frameborder="0"></iframe>
+                <div class="vid-desc">
+                    <h4>Inspect This Car - Lighthouse Films Capstone Project (2024)</h4>
+                    <h5>Contributing Roles: Team Second, Creative Consultant, Client Communications, Managing Project Deliverables</h5>
+                    <h6>Programs I Worked With: Microsoft Suite and Basecamp</h6>
+                    <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button> 
+                    <p>Description: During my final term at Algonquin College's Interactive Media Design program, I collaborated with a film production team (6 members) for a final capstone project. I was elected as a Team Second, working alongside my Team Lead (Karlin Villasis) to manage the project's deliverables, creative direction, scope, and professional client-to-team communication. Our goal was to help promote Ali Yaqub's independent business by creating a well-polished commercial video, as well as a social media marketing strategy for various platforms. Our project proved successful, with our client satisfied with the final outcome. This project spanned across three intensive months, from May 2024 to August 2024.</p>
+                </div>
             </div>
 
             <div class="vid">
-                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
+                <!-- dividing the video into one section of the container, and the description in the other. The video frame floats left to allow for text desc to wrap around it -->
+                <iframe class="video" src="https://www.youtube.com/embed/QpJco8KUfXE?si=SAVmzBHC3IYbPCKD" allowfullscreen frameborder="0"></iframe>
                 <div class="vid-desc">
-                    <h4>Title (YYYY)</h4>
+                    <h4>Algonquin College Music Club Interview (2024)</h4>
                     <h5>Contributing Roles: Role, Role, Role</h5>
                     <h6>Programs I Worked With: Program, Program</h6>
                     <button class="expand-btn" onclick="toggleDescriptions()">Expand Video Descriptions</button> 
@@ -97,11 +126,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="commercial">
-        <h3 id="Commercial">Commercial Videos</h3>
-        <p class="TBA">Section coming soon!</p>
     </div>
 
     <div class="motiongraphics">
@@ -312,10 +336,10 @@
         font-size: 123%;
         /* text-align: justify; */
         line-height: 1.5; /* adds space between lines of text for better readability */
-        display: block; /* ensures the description text is displayed by default for desktop, will still hide it for mobile */
+        display: block; /* ensures the description text is displayed by default for desktop, will still hide it for mobile. WARNING: IF THE DESC IS TOGGLED OFF VIA BUTTON AND THE WEBSITE IS RE-SCALED ON DESKTOP VERSION VIA INSPECT ELEMENT, THE DESC WILL BE COMPLETELY GONE */
     }
 
-    /* This expand description button will only apply for mobile sizes, therefore it's hidden at a screen size of 1250px or more */
+    /* This expand description button will only apply for mobile sizes, therefore it's hidden at a screen size of 1250px or more. */
     .expand-btn {
         display: none;
     }
