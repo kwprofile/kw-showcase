@@ -27,7 +27,34 @@
         </details>
     </div>
 
-    
+    <!-- PAGE CONTENTS -->
+    <div class="content-container">
+        <!-- ABOUT ME BLURB -->
+        <div class="about-me">
+            <!-- polaroid portrait -->
+            <img src="Website/AboutMePortrait.png" alt="Kianna Willmore" class="about-me-portrait">
+            <div class="about-me-text">
+                <h2>About Me</h2>
+                <p>I am an Algonquin College IMD graduate (honours), and a current Carleton University Film Studies student. For years, I've been honing in my multimedia skills as I work towards a career within the creative industry. Though I specialize in film and video production, I'm also experienced in graphic design, photography, and other hands-on art mediums.</p>
+            </div>
+        </div>
+
+        <!-- FEATURED WORK -->
+         <div class="featured-work">
+            <h2 class="featured-txt">Featured Work</h2>
+
+            <!-- Featured Video -->
+            <div class="vid">
+                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
+                <div class="vid-desc">
+                    <h3>BUDDY (2026)</h3>
+                    <p>mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed</p>
+                </div>
+            </div>
+
+            <!-- PHOTO SCROLL -->
+         </div>
+    </div>
 </body>
 
 
@@ -35,7 +62,7 @@
 <!-- NAVBAR STYLING -->
 <style>
     .content {
-        background-color: grey;
+        background-color: rgb(190, 137, 102);
         /* fixes the navbar issue with spacing around its background */
         margin: auto;
     }
@@ -100,5 +127,56 @@
         font-style: normal;
     }
 </style>
+
+
+<!-- ABOUT ME STYLING -->
+<style>
+    /* aligns all body contents */
+    .content-container {
+        margin: 0;
+        margin-top: 5%;
+        padding: 0 10%;
+        color: white;
+    }
+
+    /* About me */
+    .about-me {
+        display: flex;
+    }
+    .about-me h2 {
+        font-size: 3vw;
+    }
+    /* styles the portrait polaroid */
+    .about-me-portrait {
+        width: 40%;
+        /* adds a shadow */
+        filter: drop-shadow(0 0 0.75rem rgb(93, 48, 19));
+    }
+    body {
+        /* Sets the bg image */
+        /* background-image: url(Website/FeaturedBG.png); */
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Featured section */
+    .featured-txt {
+        text-align: center;
+        font-size: 3vw;
+    }
+    .vid {
+        display: flex;
+        flex-direction: row;
+        /* will center the vid + desc in middle of pg */
+        justify-content: center;
+        margin: 0 10%;
+    }
+    .video {
+        width: 200%;
+        height: auto;
+    }
+</style>
+
 </html>
 
