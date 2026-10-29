@@ -44,7 +44,7 @@
             <h2>Featured Work</h2>
             <!-- Featured Video -->
             <div class="vid">
-                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0"></iframe>
+                <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0" width="560" height="315"></iframe>
                 <div class="vid-desc">
                     <h3>BUDDY (2026)</h3>
                     <p>mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed</p>
@@ -251,16 +251,19 @@
 
     /* Featured section */
     .vid {
-        display: flex;
-        flex-direction: row;
+        /* set as a grid so the desc and vid frame have equal amount of space */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5%;
         /* will center the vid + desc in middle of pg */
         justify-content: center;
-        margin: 0 10%;
-        /* Padding here too */
+        /* making the space this section takes up smaller, horizontal-wise */
         padding: 0 10%;
+        margin: 0 10%;
     }
-    .video {
-        margin-right: 5%;
+    .vid h3 {
+        font-size: 1.7vw;
+        margin: 0;
     }
 
     /* Photo Carousel */
