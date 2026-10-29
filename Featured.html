@@ -83,7 +83,7 @@
             </div>
             <h3 class="insta-handle">See some of the latest designs and photos on my Instagram, @kw.onfilm</h3>
 
-            <!-- SKILLSETS + NAVIGATION -->
+            <!-- SKILLSETS -->
             <h2>Experienced with...</h2>
             <table>
                 <tr>
@@ -92,8 +92,8 @@
                     <td>• Davinci Resolve</td>
                 </tr>
                 <tr>
-                    <td>• Adobe Audition</td>
                     <td>• Canva & Affinity</td>
+                    <td>• Adobe Audition</td>
                     <td>• After Effects</td>
                 </tr>
                 <tr>
@@ -107,6 +107,15 @@
                     <td>• Lighting equipment</td>
                 </tr>
             </table>
+
+            <!-- PAGES NAVIGATION -->
+            <h2>Explore portfolio</h2>
+            <ul class="explore-btns">
+                <button onclick="window.location.href='Videography.html'">Videography</button>
+                <button onclick="window.location.href='Photography.html'">Photography</button>
+                <button onclick="window.location.href='GraphicDesign.html'">Graphic Design</button>
+                <button onclick="window.location.href='Contact.html'">Contact Me</button>
+            </ul>
         </div>
     </div>
 </body>
@@ -209,6 +218,7 @@
     /* styles the portrait polaroid */
     .about-me-portrait {
         width: 35%;
+        height: auto;
         /* adds a shadow */
         filter: drop-shadow(0 0 0.75rem rgb(93, 48, 19));
     }
@@ -277,6 +287,19 @@
         font-size: 1.5vw;
         /* spacing between cells */
         border-spacing: 7vw 0.5vw;
+    }
+
+    /* Explore Portfolio list */
+    /* tbh this is how i should've styled the navigation dropdown */
+    .explore-btns {
+        list-style-type: none;
+        width: 30%;
+        /* flex column orders them vertically */
+        display: flex;
+        flex-direction: column;
+        /* gets rid of auto padding on lists so that it's not off center */
+        padding: 0;
+        margin: 0 auto; /* the auto part centers the buttons */
     }
 </style>
 
