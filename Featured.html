@@ -41,18 +41,18 @@
 
         <!-- FEATURED WORK -->
          <div class="featured-work">
-            <h2>Featured Work</h2>
+            <h2>~ Featured Work ~</h2>
             <!-- Featured Video -->
             <div class="vid">
                 <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0" width="560" height="315"></iframe>
                 <div class="vid-desc">
                     <h3>BUDDY (2026)</h3>
-                    <p>mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed mini blurb about the production and what it entailed</p>
+                    <p>Plot synopsis goes here...</p>
                 </div>
             </div>
 
             <!-- PHOTO SCROLL -->
-            <h2>Sample Photos</h2>
+            <h2>~ Sample Photos ~</h2>
             <div class="carousel">
                 <div class="photos-container">
                     <img src="Website/test_photo_1.jpg" alt="Photo 1" class="photo">
@@ -83,7 +83,7 @@
             <h3 class="insta-handle">See some of the latest designs and photos on my Instagram, @kw.onfilm</h3>
 
             <!-- SKILLSETS -->
-            <h2>Experienced With...</h2>
+            <h2>~ Experienced With... ~</h2>
             <table>
                 <tr>
                     <td>• Photoshop</td>
@@ -109,14 +109,14 @@
 
 
             <!-- RECENT EXPERIENCE -->
-            <h2>Recent Relevant Work</h2>
-            <ul>
+            <h2>~ Recent Relevant Work ~</h2>
+            <ul class="work">
                 <li>Carleton University Film Society's Social Media Marketing Officer (April 2026-present): Responsible for managing, designing, and posting original promotional material for Carleton Film Society's social media page. Utilized Photoshop and Canva to create digital content and flyers in order to boost club engagement.</li>
-                <li></li>
+                <li>BUDDY film crewmember (January-April 2026): Editor, colourist, actor, and creative consultant. Assisted during pre-production and production phases, worked closely with our team to bring the film to life.</li>
             </ul>
 
             <!-- PAGES NAVIGATION -->
-            <h2>Explore Portfolio</h2>
+            <h2 class="explore-title">~ Explore Portfolio ~</h2>
             <ul class="explore-btns">
                 <button onclick="window.location.href='Videography.html'">Videography</button>
                 <button onclick="window.location.href='Photography.html'">Photography</button>
@@ -232,7 +232,8 @@
         margin-top: 5%;
     }
     .about-me-text p {
-        font-size: 1.3vw;
+        font-size: 1.5vw;
+        line-height: 1.3;
     }
     /* styles the portrait polaroid */
     .about-me-portrait {
@@ -260,10 +261,15 @@
         /* making the space this section takes up smaller, horizontal-wise */
         padding: 0 10%;
         margin: 0 10%;
+        /* gives space between next section */
+        margin-bottom: 7%;
     }
     .vid h3 {
-        font-size: 1.7vw;
+        font-size: 2vw;
         margin: 0;
+    }
+    .vid p {
+        font-size: 1.5vw;
     }
 
     /* Photo Carousel */
@@ -297,6 +303,8 @@
     .insta-handle {
         text-align: center;
         font-size: 2vw;
+        /* gives space between next section */
+        margin-bottom: 5%;
     }
 
     /* Experience */
@@ -307,9 +315,27 @@
         font-size: 1.5vw;
         /* spacing between cells */
         border-spacing: 7vw 0.5vw;
+        /* gives space between next section */
+        margin-bottom: 5%;
+    }
+
+    /* Relevant experience */
+    .work {
+        /* gives space between next section */
+        margin-bottom: 5%;
+        margin: 0 15%;
+        font-size: 1.5vw;
+        line-height: 1.3;
+    }
+    .work li {
+        margin-bottom: 1.5vw;
     }
 
     /* Explore Portfolio list */
+    .explore-title {
+        margin-top: 7%;
+        font-size: 4vw;
+    }
     /* tbh this is how i should've styled the navigation dropdown */
     .explore-btns {
         list-style-type: none;
@@ -320,6 +346,17 @@
         /* gets rid of auto padding on lists so that it's not off center */
         padding: 0;
         margin: 0 auto; /* the auto part centers the buttons */
+    }
+    .explore-btns button {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 3vw;
+        margin-bottom: 8%;
+    }
+    .explore-btns button:hover {
+        color: rgb(78, 29, 5);
     }
 </style>
 
