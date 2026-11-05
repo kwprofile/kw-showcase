@@ -7,6 +7,20 @@
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oregano&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
+
+    <!-- these ones are p nice -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
 </head>
 
 <body class="content">
@@ -35,19 +49,21 @@
             <img src="Website/AboutMePortrait.png" alt="Kianna Willmore" class="about-me-portrait">
             <div class="about-me-text">
                 <h2 class="about-me-heading">About Me</h2>
-                <p>I am an Algonquin College IMD graduate (honours), and a current Carleton University Film Studies student. For years, I've been honing in my multimedia skills as build my career within the creative industry. Though I specialize in film and video production, I'm also experienced in graphic design, photography, web design, and other visual art mediums. My strengths lie in my passion, as I'm very dedicated to perfecting my craft. Feel free to reach for collaboration, or even just to say hi! I'm always excited to meet fellow creatives. :)</p>
+                <p>I am an Algonquin College IMD graduate with honours, and a current Carleton University Film Studies student. For years, I've been honing in my multimedia skills as I build my career within the creative industry. Though I specialize in film and video production, I'm also experienced in web/graphic design, photography, drawing, and other visual art mediums. Passion is my biggest strength, as I'm very dedicated to perfecting my craft. Feel free to reach for collaboration, or even just to say hi! I'm always excited to meet fellow creatives. :)</p>
             </div>
         </div>
 
         <!-- FEATURED WORK -->
          <div class="featured-work">
-            <h2>~ Featured Work ~</h2>
+            <h2>~ Featured Video ~</h2>
             <!-- Featured Video -->
             <div class="vid">
                 <iframe class="video" src="https://www.youtube.com/embed/FykjvBPTksM?si=8WjELnBZZ6t6GDqz" allowfullscreen frameborder="0" width="560" height="315"></iframe>
                 <div class="vid-desc">
                     <h3>BUDDY (2026)</h3>
-                    <p>Plot synopsis goes here...</p>
+                    <h4>Directed by Tristan Deschamps</h4>
+                    <h4>My contribution: editor, actor, creative consultant, production assistant, colourist</h4>
+                    <h4>Category: Short Film (20 min)</h4>
                 </div>
             </div>
 
@@ -112,7 +128,8 @@
             <h2>~ Recent Relevant Work ~</h2>
             <ul class="work">
                 <li>Carleton University Film Society's Social Media Marketing Officer (April 2026-present): Responsible for managing, designing, and posting original promotional material for Carleton Film Society's social media page. Utilized Photoshop and Canva to create digital content and flyers in order to boost club engagement.</li>
-                <li>BUDDY film crewmember (January-April 2026): Editor, colourist, actor, and creative consultant. Assisted during pre-production and production phases, worked closely with our team to bring the film to life.</li>
+                <li>Film Festivals Participant (October-November 2026): Partook in Ottawa's 48hr and Digi60 film competitions as a member of TILT Productions. Worked collaboratively under short time restraints,</li>
+                <li>BUDDY Film Crewmember (January-April 2026): Editor, colourist, actor, and creative consultant. Assisted during pre-production and production phases, worked closely with our team to bring the film to life. Gained experience within a collaborative work environment.</li>
             </ul>
 
             <!-- PAGES NAVIGATION -->
@@ -209,10 +226,23 @@
     }
     h2 {
         text-align: center;
-        font-size: 3vw;
+        font-size: 3.5vw;
         /* setting the font for all h2's */
         font-family: "Fredericka the Great", serif;
         font-weight: 400;
+    }
+    h3 {
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    h4 {
+        font-family: "Solway", serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    p {
+        font-family: "Solway", serif;
     }
 
     /* About me */
@@ -222,29 +252,36 @@
         padding: 0 10%;
     }
     .about-me-text {
-        margin-left: 3%;
+        margin-left: 6%;
     }
     .about-me-heading {
         font-size: 5vw;
         text-align: left;
         /* margin bottom 0 gets rid of extra spacing between desc and heading */
         margin-bottom: 0;
-        margin-top: 5%;
+        margin-top: 2%;
     }
     .about-me-text p {
+        margin-top: 2%;
         font-size: 1.5vw;
-        line-height: 1.3;
+        line-height: 1.6;
+        font-weight: 500;
     }
     /* styles the portrait polaroid */
     .about-me-portrait {
-        width: 35%;
-        height: auto;
+        /* sets how much space the image takes up */
+        width: 50vw;
+        /* max-width has to be fixed pixels otherwise different browsers will display different image sizes */
+        max-width: 500px;
+        height: 100%;
+        /* will prevent it from being squished when browser width shrinks */
+        object-fit: cover;
         /* adds a shadow */
         filter: drop-shadow(0 0 0.75rem rgb(93, 48, 19));
     }
     body {
         /* Sets the bg image */
-        background-image: url(Website/FeaturedBG.png);
+        background-image: url(Website/FeaturedBG_v2.png);
         background-size: cover;
         margin: 0;
         padding: 0;
@@ -260,16 +297,28 @@
         justify-content: center;
         /* making the space this section takes up smaller, horizontal-wise */
         padding: 0 10%;
-        margin: 0 10%;
+        margin: 0 7%;
         /* gives space between next section */
         margin-bottom: 7%;
     }
-    .vid h3 {
-        font-size: 2vw;
-        margin: 0;
+    .video {
+        border: 8px solid white;
+        filter: drop-shadow(0 0 0.75rem rgb(93, 48, 19));
     }
-    .vid p {
+    .vid-desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .vid h3 {
+        font-size: 2.5vw;
+        margin: 0;
+        margin-bottom: 4%;
+    }
+    .vid h4 {
         font-size: 1.5vw;
+        margin: 0;
+        margin-bottom: 4%;
     }
 
     /* Photo Carousel */
@@ -302,9 +351,13 @@
     }
     .insta-handle {
         text-align: center;
-        font-size: 2vw;
+        font-size: 2.7vw;
         /* gives space between next section */
         margin-bottom: 5%;
+        margin-top: 1.5%;
+        font-weight: 400;
+        font-family: "oregano", serif;
+        letter-spacing: 3px;
     }
 
     /* Experience */
@@ -317,6 +370,8 @@
         border-spacing: 7vw 0.5vw;
         /* gives space between next section */
         margin-bottom: 5%;
+        font-family: "Solway", serif;
+        font-weight: 600;
     }
 
     /* Relevant experience */
@@ -329,12 +384,14 @@
     }
     .work li {
         margin-bottom: 1.5vw;
+        font-family: "Solway", serif;
     }
 
     /* Explore Portfolio list */
     .explore-title {
         margin-top: 7%;
-        font-size: 4vw;
+        font-size: 4.5vw;
+        margin-bottom: 2.5%;
     }
     /* tbh this is how i should've styled the navigation dropdown */
     .explore-btns {
@@ -353,7 +410,8 @@
         background-color: transparent;
         color: white;
         font-size: 3vw;
-        margin-bottom: 8%;
+        margin-bottom: 10%;
+        font-family: "Fredericka the Great", serif;
     }
     .explore-btns button:hover {
         color: rgb(78, 29, 5);
