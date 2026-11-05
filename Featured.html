@@ -9,18 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oregano&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
-
-    <!-- these ones are p nice -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
 </head>
 
 <body class="content">
@@ -417,6 +405,36 @@
         color: rgb(78, 29, 5);
     }
 </style>
+
+
+<!-- STYLING THE RESIZING -->
+ <style>
+    /* at 1250px screen size and under, these changes will be applied (for mobile) */
+    @media screen and (max-width: 1250px) {
+        div.about-me {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .about-me-portrait {
+            width: 70vw;
+            max-width: 400px;
+            margin-top: 3%;
+        }
+        .about-me-heading {
+            text-align: center;
+            margin-top: 5%;
+            font-size: 10vw;
+        }
+        .about-me-text p {
+            font-size: 2.5vw;
+            margin-top: 3%;
+            line-height: 1.8;
+            margin-bottom: 10%;
+        }
+    }
+ </style>
 
 </html>
 
